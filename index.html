@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Axis Adventure</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="scene-container">
+            <!-- Scenes will be dynamically loaded here -->
+        </div>
+        <div id="ui-container">
+            <div id="text-box" class="hidden">
+                <p id="text-content"></p>
+                <div id="choices"></div>
+            </div>
+            <div id="score-display">Score: <span id="score">0</span></div>
+        </div>
+        <div id="navigation">
+            <button id="forward" class="nav-button">Forward</button>
+            <button id="backward" class="nav-button">Back</button>
+            <button id="left" class="nav-button">Left</button>
+            <button id="right" class="nav-button">Right</button>
+        </div>
+    </div>
+    <audio id="background-music" loop></audio>
+    <script src="js/game.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/audio.js"></script>
+</body>
+</html> 
