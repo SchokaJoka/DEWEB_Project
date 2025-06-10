@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic&family=Special+Gothic+Expanded+One&display=swap');
+
 /* Reset and basic setup - removes default browser styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Special Gothic", sans-serif;
+
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Special Gothic", sans-serif;
     background-color: #1a1a1a;
     color: white;
     line-height: 1.6;
@@ -61,15 +65,14 @@ body {
 
 /* Content box that holds the text for each decade */
 .decade-content {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     position: fixed;
-    left: 50%;
-    top: 50%;
+    left: 10px;
+    bottom: 10px;
     z-index: 1000;
-    transform: translate(-50%, -50%);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 7px;
-    max-width: 800px;
+    max-width: 50%;
     width: 90%;
     text-align: left;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -83,21 +86,21 @@ body {
 }
 
 .decade-title {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 4em;
 }
 
 .decade-subtitle {
+    font-family: "Special Gothic Expanded One", sans-serif;
     color: #ddd; 
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
+    font-weight: 100;
 }
 
 .decade-description {
     font-size: 1.2rem;
-    line-height: 1.6;
+    line-height: 1.2;
     color: #e0e0e0;
 }
 
@@ -112,8 +115,8 @@ html {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.7);
-    border: 2px solid white;
+    background: rgba(0, 0, 0, 0.9);
+    border: 0px solid white;
     color: white;
     width: 50px;
     height: 50px;
@@ -127,3 +130,36 @@ html {
     background: rgba(0, 0, 0, 0.9);
     transform: scale(1.1);
 }
+
+.vote-container {
+    height: 50vh;
+    background-color:bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vote-content {
+    width: 50%;
+    height: 50%;
+    background-color: blue;
+    display: block;
+    justify-content: center;
+    align-items: space-between;
+    text-align: center;
+}
+
+.vote-title {
+    margin-top: 1.5rem;
+}
+
+.vote-description {
+    margin-bottom: 2rem;
+}
+
+.button-container {
+    background-color: aqua;
+    width: 100%;
+    margin-top: 1rem;
+}
+
