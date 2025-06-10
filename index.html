@@ -1,33 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z-Axis Adventure</title>
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-    <div id="game-container">
-        <div id="scene-container">
-            <!-- Scenes will be dynamically loaded here -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hip-Hop History Timeline</title>
+        <!-- Standard favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/Icon.ico">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <!-- Audio elements -->
+        <audio id="audio-80s" loop>
+            <source src="assets/audio/1980.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio-90s" loop>
+            <source src="assets/audio/1990.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio-2000s" loop>
+            <source src="assets/audio/2000.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio-2010s" loop>
+            <source src="assets/audio/2010.mp3" type="audio/mp3">
+        </audio>
+        
+        <!-- Mute button -->
+        <button id="mute-button" class="mute-button">🔊</button>
+
+        <div class="timeline-container">
+            
+            <!-- 1980s Section -->
+            <section class="decade-section decade-1980s" id="decade-0">
+                <div class="parallax-container" id="parallax-0"></div>
+                <div class="decade-content">
+                    <h1 class="decade-title">1980s</h1>
+                    <h2 class="decade-subtitle">Birth of Hip-Hop</h2>
+                    <p class="decade-description">
+                        The 1980s marked the explosive birth of hip-hop culture in the Bronx, New York. 
+                        DJ Kool Herc, Afrika Bambaataa, and Grandmaster Flash pioneered the turntable techniques 
+                        that would define the genre. This decade saw the rise of legendary groups like 
+                        Run-DMC and the Beastie Boys, who brought hip-hop from underground block parties 
+                        to mainstream radio and MTV.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 1990s Section -->
+            <section class="decade-section decade-1990s" id="decade-1">
+                <div class="parallax-container" id="parallax-1"></div>
+                <div class="decade-content">
+                    <h1 class="decade-title">1990s</h1>
+                    <h2 class="decade-subtitle">The Golden Age</h2>
+                    <p class="decade-description">
+                        The 90s are widely considered hip-hop's golden age, bringing us legendary artists 
+                        like Tupac Shakur, The Notorious B.I.G., Nas, and Jay-Z. The East Coast-West Coast 
+                        rivalry defined much of the decade, while innovative producers like Dr. Dre 
+                        created the G-Funk sound. Groups like Wu-Tang Clan revolutionized both the music 
+                        and business side of hip-hop.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 2000s Section -->
+            <section class="decade-section decade-2000s" id="decade-2">
+                <div class="parallax-container" id="parallax-2"></div>
+                <div class="decade-content">
+                    <h1 class="decade-title">2000s</h1>
+                    <h2 class="decade-subtitle">Mainstream Dominance</h2>
+                    <p class="decade-description">
+                        The 2000s saw hip-hop fully dominate mainstream culture. Eminem became the 
+                        best-selling rapper of all time, while Jay-Z and Kanye West redefined what 
+                        it meant to be a hip-hop mogul. The South rose to prominence with artists 
+                        like OutKast and Lil Wayne, while producers like Timbaland and The Neptunes 
+                        created innovative sounds that influenced pop music globally.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 2010s Section -->
+            <section class="decade-section decade-2010s" id="decade-3">
+                <div class="parallax-container" id="parallax-3"></div>
+                <div class="decade-content">
+                    <h1 class="decade-title">2010s</h1>
+                    <h2 class="decade-subtitle">Digital Revolution</h2>
+                    <p class="decade-description">
+                        The 2010s brought a digital revolution to hip-hop. Streaming platforms like 
+                        Spotify and Apple Music changed how music was consumed, while social media 
+                        transformed artist-fan relationships. Drake dominated the charts, Kendrick Lamar 
+                        won a Pulitzer Prize, and new subgenres like trap and mumble rap emerged. 
+                        Hip-hop officially became the most popular music genre in America.
+                    </p>
+                </div>
+            </section>
         </div>
-        <div id="ui-container">
-            <div id="text-box" class="hidden">
-                <p id="text-content"></p>
-                <div id="choices"></div>
-            </div>
-            <div id="score-display">Score: <span id="score">0</span></div>
-        </div>
-        <div id="navigation">
-            <button id="forward" class="nav-button">Forward</button>
-            <button id="backward" class="nav-button">Back</button>
-            <button id="left" class="nav-button">Left</button>
-            <button id="right" class="nav-button">Right</button>
-        </div>
-    </div>
-    <audio id="background-music" loop></audio>
-    <script src="js/game.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/audio.js"></script>
-</body>
-</html> 
+        <script src="js/audioManager.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/parallaxManager.js"></script>
+    </body>
+</html>
