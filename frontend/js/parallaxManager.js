@@ -13,10 +13,10 @@ class ParallaxManager {
         // Create scenes for each decade
         for (let i = 0; i < 4; i++) {
             const scene = new Scene(i, [
-                [`layer${i}-0`, 50, 20, true],          // layer 0 (z-index, movement amount)
-                [`layer${i}-1`, 100, 100, true],         // layer 1
-                [`layer${i}-2`, 150, 130, true],        // layer 2
-                [`layer${i}-3`, 200, 160, true],        // layer 3
+                [`layer${i}-0`, 1, 20, true],          // layer 0 (z-index, movement amount)
+                [`layer${i}-1`, 2, 100, true],         // layer 1
+                [`layer${i}-2`, 3, 130, true],        // layer 2
+                [`layer${i}-3`, 4, 160, true],        // layer 3
             ]);
             this.scenes.push(scene);
         }

@@ -1,20 +1,21 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
-import { cors } from 'hono/cors'  
+import { cors } from 'hono/cors'
+import { readVotes, createVote } from './db.js'
 
 const app = new Hono()
 
 app.use('/api/*', cors())
 
-app.get('/api/ratings', async (c) => {
-  const ratings = readRatings();
-  return c.json(ratings);
+app.get('/api/votes', async (c) => {
+  const votes = readVotes();
+  return c.json(votes);
 })
 
-app.post('/api/ratings', async (c) => {
-  const rating = await c.req.json();
-  createRating(rating);
-  return c.json(rating);
+app.post('/api/votes', async (c) => {
+  const vote = await c.req.json();
+  const updatedVotes = createVote(vote);
+  return c.json(updatedVotes);
 })
 
 serve({
