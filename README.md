@@ -27,7 +27,7 @@ This project demonstrates modern web development techniques, focusing on paralla
 
 2. **Start the frontend project:**
 
-open the main HTML file (`index.html`) in your browser.
+   open the main HTML file (`index.html`) in your browser.
 
 ## Starting the Backend Server
 
@@ -39,17 +39,17 @@ open the main HTML file (`index.html`) in your browser.
 
 2. **Install backend dependencies:**
 
-   - For Node.js/Express:
-     ```sh
-     npm install
-     ```
+   For Node.js/Express:
+   ```sh
+   npm install
+   ```
 
 3. **Start the backend server:**
 
-   - For Node.js/Express:
-     ```sh
-     npm run dev
-     ```
+   For Node.js/Express:
+   ```sh
+   npm run dev
+   ```
      
 ## Usage
 
